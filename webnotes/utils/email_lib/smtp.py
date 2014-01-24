@@ -324,6 +324,6 @@ class SMTPServer:
 			raise
 		except smtplib.SMTPException:
 			webnotes.msgprint('There is something wrong with your Outgoing Mail Settings. \
-				Please contact us at support@erpnext.com')
+				Please contact us at support@Wamssler.com')
 			raise
 	
