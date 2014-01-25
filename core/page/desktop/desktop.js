@@ -32,10 +32,8 @@ wn.core.pages.desktop.render = function() {
 				<div id="module-count-%(_link)s" class="circle" style="display: None">\
 					<span class="circle-text"></span>\
 				 </div>\
-				<div class="case-border" style="background-color: %(color)s">\
-					<i class="%(icon)s"></i>\
-				</div>\
-				<div class="case-label">%(label)s</div>\
+				 <img id="%(_link)s" src="files/%(icon)s.png" alt="Smiley face" height="35" width="35">\
+				 <div class="case-label">%(label)s</div>\
 			</div>', module)).click(function() {
 				var link = $(this).attr("data-link");
 				if(link.substr(0, 1)==="/") {
@@ -45,8 +43,27 @@ wn.core.pages.desktop.render = function() {
 			}).css({
 				cursor:"pointer"
 			}).appendTo("#icon-grid");
+
+			$(document).on('mouseout', repl('#module-icon-%(_link)s', module), function(){
+    					
+    					$(repl("#%(_link)s", module)).attr('height','35');
+						$(repl("#%(_link)s", module)).attr('width','35');
+			});
+
+			$(document).on('mouseover', repl('#module-icon-%(_link)s', module), function(){
+
+			   $(repl("#%(_link)s", module)).attr('height','60');
+						$(repl("#%(_link)s", module)).attr('width','60');
+			});
 	}
+
 	
+
+	/*$('html body div#module-icon-messages').hover(function(){
+		console.log($('div#module-icon-messages.case-wrapper'))
+		$("#messages").attr("src", "files/icon_activity.png")
+	})*/
+
 	// modules
 	var modules_list = wn.user.get_desktop_items();
 	$.each(modules_list, function(i, m) {
