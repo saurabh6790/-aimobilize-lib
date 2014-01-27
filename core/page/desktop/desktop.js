@@ -26,13 +26,13 @@ wn.core.pages.desktop.render = function() {
 		module.label = wn._(module.label);
 		//module.gradient_css = wn.get_gradient_css(module.color, 45);
 		module._link = module.link.toLowerCase().replace("/", "-");
-		
+		//console.log(repl('/files/%(icon)s',module))	
 		$module_icon = $(repl('<div id="module-icon-%(_link)s" class="case-wrapper" \
 				data-name="%(name)s" data-link="%(link)s">\
 				<div id="module-count-%(_link)s" class="circle" style="display: None">\
 					<span class="circle-text"></span>\
 				 </div>\
-				 <img id="%(_link)s" src="files/%(icon)s.png" alt="Smiley face" height="35" width="35">\
+				 <img id="%(_link)s" src="files/%(icon)s.png" alt="Smiley face" height="60" width="60">\
 				 <div class="case-label">%(label)s</div>\
 			</div>', module)).click(function() {
 				var link = $(this).attr("data-link");
@@ -46,14 +46,14 @@ wn.core.pages.desktop.render = function() {
 
 			$(document).on('mouseout', repl('#module-icon-%(_link)s', module), function(){
     					
-    					$(repl("#%(_link)s", module)).attr('height','35');
-						$(repl("#%(_link)s", module)).attr('width','35');
+    					$(repl("#%(_link)s", module)).attr('height','60');
+						$(repl("#%(_link)s", module)).attr('width','60');
 			});
 
 			$(document).on('mouseover', repl('#module-icon-%(_link)s', module), function(){
 
-			   $(repl("#%(_link)s", module)).attr('height','60');
-						$(repl("#%(_link)s", module)).attr('width','60');
+			   $(repl("#%(_link)s", module)).attr('height','70');
+						$(repl("#%(_link)s", module)).attr('width','70');
 			});
 	}
 

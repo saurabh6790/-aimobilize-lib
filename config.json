@@ -25,7 +25,7 @@
   }, 
   "To Do": {
    "color": "#f1c40f", 
-   "icon": "icon-money", 
+   "icon": "icon-todo", 
    "label": "To Do", 
    "link": "todo", 
    "type": "page"
