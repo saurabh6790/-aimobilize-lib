@@ -24,7 +24,7 @@ wn.ui.toolbar.Toolbar = Class.extend({
 		})
 	},
 	make: function() {
-		$('header').append('<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">\
+		$('header').append('<div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#FFFFFF;" role="navigation">\
 			<div class="container">\
 				<div class="navbar-header">\
 					<button type="button" class="navbar-toggle" data-toggle="collapse" \
@@ -41,7 +41,7 @@ wn.ui.toolbar.Toolbar = Class.extend({
 					<img src="lib/images/ui/spinner.gif" id="spinner"/>\
 					<ul class="nav navbar-nav navbar-right">\
 						<li class="dropdown">\
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#" \
+							<a class="dropdown-toggle" style="color:#868686;" data-toggle="dropdown" href="#" \
 								onclick="return false;" id="toolbar-user-link"></a>\
 							<ul class="dropdown-menu" id="toolbar-user">\
 							</ul>\
@@ -118,8 +118,8 @@ wn.ui.toolbar.Toolbar = Class.extend({
 		wn.ui.toolbar.new_dialog = new wn.ui.toolbar.NewDialog();
 		wn.ui.toolbar.search = new wn.ui.toolbar.Search();
 		wn.ui.toolbar.report = new wn.ui.toolbar.Report();
-		$('.navbar .nav:first').append('<li class="dropdown">\
-			<a class="dropdown-toggle" href="#"  data-toggle="dropdown"\
+		$('.navbar .nav:first').append('<li class="dropdown" style="color:red;">\
+			<a class="dropdown-toggle" style="color:#868686;" href="#"  data-toggle="dropdown"\
 				title="'+wn._("File")+'"\
 				onclick="return false;">'+wn._("File")+'</a>\
 			<ul class="dropdown-menu" id="navbar-file">\
@@ -135,7 +135,7 @@ wn.ui.toolbar.Toolbar = Class.extend({
 
 	make_tools: function() {
 		$('.navbar .nav:first').append('<li class="dropdown">\
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#" \
+			<a class="dropdown-toggle" style="color:#868686;" data-toggle="dropdown" href="#" \
 				title="'+wn._("Tools")+'"\
 				onclick="return false;">'+wn._("Tools")+'</a>\
 			<ul class="dropdown-menu" id="toolbar-tools">\
