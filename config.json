@@ -4,35 +4,35 @@
  "modules": {
   "Calendar": {
    "color": "#2980b9", 
-   "icon": "icon_calendar", 
+   "icon": "con-calendar", 
    "label": "Calendar", 
    "link": "Calendar/Event", 
    "type": "view"
   }, 
   "Finder": {
    "color": "#14C7DE", 
-   "icon": "icon_finder", 
+   "icon": "icon-folder-open", 
    "label": "Finder", 
    "link": "finder", 
    "type": "page"
   }, 
   "Messages": {
    "color": "#9b59b6", 
-   "icon": "icon_message", 
+   "icon": "icon-comments", 
    "label": "Messages", 
    "link": "messages", 
    "type": "page"
   }, 
   "To Do": {
    "color": "#f1c40f", 
-   "icon": "icon-todo", 
+   "icon": "icon-check", 
    "label": "To Do", 
    "link": "todo", 
    "type": "page"
   }, 
   "Website": {
    "color": "#16a085", 
-   "icon": "icon_website", 
+   "icon": "icon-globe", 
    "link": "website-home", 
    "type": "module"
   }
